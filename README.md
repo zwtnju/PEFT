@@ -7,7 +7,7 @@ The required Python packages for fine-tuning pre-trained models are listed in [`
 ## Fine-tuned Models
 
 All fine-tuned models for every task can be downloaded here: 
-[Baidu Netdisk](https://pan.baidu.com/s/10Upa_z3UBKo7cJmx0Aw45g?pwd=lhpz).
+[Baidu Netdisk](https://pan.baidu.com/s/1XSIveLO4BYKtFA8Q0hjGQg?pwd=0003).
 
 
 ## Runs
