@@ -31,7 +31,7 @@ import json
 import numpy as np
 from tqdm import tqdm
 
-from utils import show_gpu, getAdapter, get_model_size, ADAPTER_TYPE
+from utils import show_gpu, get_adapter, get_model_size, ADAPTER_TYPE
 from model import Model
 from torch.nn import CrossEntropyLoss, MSELoss
 from torch.utils.data import DataLoader, Dataset, SequentialSampler, RandomSampler

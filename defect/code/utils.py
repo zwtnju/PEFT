@@ -34,7 +34,7 @@ def get_model_size(model, required=True):
     return "{}M".format(round(model_size / 1e+6))
 
 
-def getAdapter(adapter_type):
+def get_adapter(adapter_type):
     if "houlsby" in adapter_type:
         adapter_config = HoulsbyInvConfig()
     elif "pfeiffer" in adapter_type:
@@ -45,8 +45,6 @@ def getAdapter(adapter_type):
         adapter_config = PrefixTuningConfig()
     elif "lora" in adapter_type:
         adapter_config = LoRAConfig()
-    elif "ia3" in adapter_type:
-        adapter_config = IA3Config()
     else:
         adapter_config = AdapterConfig(mh_adapter=True, output_adapter=True, reduction_factor={'default': 16},
                                        non_linearity='gelu')

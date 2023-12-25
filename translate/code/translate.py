@@ -35,7 +35,7 @@ from io import open
 from itertools import cycle
 import torch.nn as nn
 
-from utils import ADAPTER_TYPE, getAdapter, show_gpu, get_model_size
+from utils import ADAPTER_TYPE, get_adapter, show_gpu, get_model_size
 from model import Seq2Seq
 from tqdm import tqdm
 from bleu import _bleu

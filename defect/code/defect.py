@@ -35,7 +35,7 @@ import json
 from tqdm import tqdm
 import multiprocessing
 
-from utils import show_gpu, getAdapter, ADAPTER_TYPE, get_model_size
+from utils import show_gpu, get_adapter, ADAPTER_TYPE, get_model_size
 from model import Model
 from transformers import (AdamW, get_linear_schedule_with_warmup,
                           BertConfig, BertTokenizer, RobertaConfig, RobertaTokenizer, T5Config, RobertaModel,

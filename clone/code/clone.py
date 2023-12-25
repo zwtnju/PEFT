@@ -41,7 +41,7 @@ from torch.utils.data.distributed import DistributedSampler
 from tqdm import tqdm, trange
 import multiprocessing
 
-from utils import ADAPTER_TYPE, getAdapter, show_gpu, get_model_size
+from utils import ADAPTER_TYPE, get_adapter, show_gpu, get_model_size
 from model import Model
 
 from transformers import (AdamW, get_linear_schedule_with_warmup,
