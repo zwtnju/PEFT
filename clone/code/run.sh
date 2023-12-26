@@ -6,9 +6,9 @@ python clone.py \
     --do_train \
     --do_test \
     --local_rank -1 \
-    --train_data_file ../dataset/train.txt \
-    --eval_data_file ../dataset/valid.txt \
-    --test_data_file ../dataset/test.txt \
+    --train_data_file ../data/train.txt \
+    --eval_data_file ../data/valid.txt \
+    --test_data_file ../data/test.txt \
     --epoch 5 \
     --block_size 400 \
     --train_batch_size 32 \
@@ -19,4 +19,4 @@ python clone.py \
     --warmup_steps 100 \
     --seed 123456 2>&1 | tee ${model}.log
 
-python ../evaluator/evaluator.py -a ../dataset/test.txt -p saved_models/${model}/predictions.txt | tee ${model}.result
+python ../evaluator/evaluator.py -a ../data/test.txt -p saved_models/${model}/predictions.txt | tee ${model}.result

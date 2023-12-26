@@ -8,9 +8,9 @@ do
       --do_train \
       --do_test \
       --local_rank -1 \
-      --train_data_file ../dataset/train.txt \
-      --eval_data_file ../dataset/valid.txt \
-      --test_data_file ../dataset/test.txt \
+      --train_data_file ../data/train.txt \
+      --eval_data_file ../data/valid.txt \
+      --test_data_file ../data/test.txt \
       --cache_path ./cache/${model} \
       --epoch 2 \
       --block_size 400 \
@@ -24,5 +24,5 @@ do
       --adapter_type ${adapter_type} \
       --do_adapter  2>&1 | tee ${model}_${adapter_type}.log
 
-  python ../evaluator/evaluator.py -a ../dataset/test.txt -p saved_models/${model}_adapter/${adapter_type}/predictions.txt 2>&1 | tee ${model}_${adapter_type}.result
+  python ../evaluator/evaluator.py -a ../data/test.txt -p saved_models/${model}_adapter/${adapter_type}/predictions.txt 2>&1 | tee ${model}_${adapter_type}.result
 done

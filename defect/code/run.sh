@@ -6,9 +6,9 @@ python defect.py \
     --do_train \
     --do_test \
     --local_rank -1 \
-    --train_data_file ../dataset/train.jsonl \
-    --eval_data_file ../dataset/valid.jsonl \
-    --test_data_file ../dataset/test.jsonl \
+    --train_data_file ../data=/train.jsonl \
+    --eval_data_file ../data/valid.jsonl \
+    --test_data_file ../data/test.jsonl \
     --epoch 5 \
     --block_size 400 \
     --train_batch_size 32 \
@@ -19,4 +19,4 @@ python defect.py \
     --warmup_steps 100 \
     --seed 123456 2>&1 | tee ${model}.log
 
-python ../evaluator/evaluator.py -a ../dataset/test.jsonl -p saved_models/${model}/predictions.txt | tee ${model}.result
+python ../evaluator/evaluator.py -a ../data/test.jsonl -p saved_models/${model}/predictions.txt | tee ${model}.result
