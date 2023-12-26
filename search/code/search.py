@@ -394,7 +394,7 @@ def main():
 
     # add adapter
     if args.do_adapter:
-        adapter_config = getAdapter(args.adapter_type)
+        adapter_config = get_adapter(args.adapter_type)
 
         if args.adapter_file:
             model.load_adapter(args.adapter_file)

@@ -1,8 +1,7 @@
 from pynvml import *
 import logging
 
-from transformers import HoulsbyInvConfig, PfeifferConfig, ParallelConfig, PrefixTuningConfig, LoRAConfig, IA3Config, \
-    AdapterConfig
+from transformers import HoulsbyConfig, PfeifferConfig, ParallelConfig, PrefixTuningConfig, LoRAConfig, AdapterConfig
 
 logger = logging.getLogger(__name__)
 
@@ -36,7 +35,7 @@ def get_model_size(model, required=True):
 
 def get_adapter(adapter_type):
     if "houlsby" in adapter_type:
-        adapter_config = HoulsbyInvConfig()
+        adapter_config = HoulsbyConfig()
     elif "pfeiffer" in adapter_type:
         adapter_config = PfeifferConfig()
     elif "parallel" in adapter_type:
@@ -51,4 +50,4 @@ def get_adapter(adapter_type):
     return adapter_config
 
 
-ADAPTER_TYPE = ["houlsby", "pfeiffer", "parallel", "prefix_tuning", "lora", "ia3"]
+ADAPTER_TYPE = ["houlsby", "pfeiffer", "parallel", "prefix_tuning", "lora"]
